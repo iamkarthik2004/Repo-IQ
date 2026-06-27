@@ -1,4 +1,4 @@
-# GitHub Repo Analyzer 🚀
+# Repo-IQ  🚀
 
 An AI-powered GitHub Repository exploration tool built using a **RAG (Retrieval-Augmented Generation)** pipeline. This project dynamically clones a GitHub repository, processes its source files into vector embeddings using **ChromaDB**, and allows you to chat with the codebase using **Google's Gemini AI**.
 
