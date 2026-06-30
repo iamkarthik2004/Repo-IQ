@@ -13,7 +13,7 @@ from answergeneration import generate_answer
 
 from ingestionpipeline import ingest_repository
 
-app = Flask(__name__, static_folder='../frontend', static_url_path='/')
+app = Flask(__name__)
 
 CORS(app)
 
@@ -23,8 +23,7 @@ CORS(app)
 
 @app.route("/", methods=["GET"])
 def home():
-    # Serve the home.html from the frontend folder
-    return app.send_static_file('home.html')
+    return jsonify({"status": "healthy", "message": "Repo-IQ API is running"}), 200
 
 
 # -------------------------------------
