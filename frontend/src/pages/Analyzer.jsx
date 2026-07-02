@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-// Update this to your deployed Railway API URL when deploying
-const API_URL = 'http://localhost:5000';
+// Dynamic API URL from environment variable, falling back to localhost for development
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 function Analyzer() {
   const [repoUrl, setRepoUrl] = useState('');
@@ -102,6 +103,11 @@ function Analyzer() {
   return (
     <>
       <div className="analyzer-card">
+        <Link to="/" className="back-btn" title="Back to Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+          </svg>
+        </Link>
         <header className="analyzer-header">
           <h1>Repo Analyzer</h1>
           <p>AI-Powered GitHub Repository Exploration</p>

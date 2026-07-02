@@ -138,6 +138,33 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    color: white;
+    transform: translateX(-3px);
+}
+
+.back-btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
 }
 
 .analyzer-header {
